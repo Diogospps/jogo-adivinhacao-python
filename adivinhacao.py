@@ -6,7 +6,7 @@ def jogar():
     print("Bem vindo no jogo de Adivinhação!")
     print("*********************************")
 
-    numero_secreto = random.randrange(1,101) * 100
+    numero_secreto = random.randrange(1,101)
     total_de_tentativas = 0
     pontos = 1000
 
@@ -50,7 +50,7 @@ def jogar():
             pontos = pontos - pontos_perdidos
                 
         
-    print("Fim de jogo")
+    print("Fim de jogo o número secreto era:", numero_secreto)
 
 
 if(__name__== "__main__"):
