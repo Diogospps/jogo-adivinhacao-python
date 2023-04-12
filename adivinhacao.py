@@ -13,7 +13,7 @@ def jogar():
     print("Qual nivel de dificuldade?")
     print("(1) Facil (2) Medio (3) Dificil")
 
-    nivel=int (input("Define o nivel"))
+    nivel=int (input("Define o nivel: "))
 
     if(nivel == 1):
         total_de_tentativas = 20

@@ -11,6 +11,9 @@ def jogar():
     enforcou = False
     acertou = False
     tentativas = 0
+    letras_faltando = len(letras_acertadas)
+    letras_erradas = ""
+
 
     #enquanto nao enforcou e nao acertou
     while(not enforcou and not acertou):
@@ -21,7 +24,11 @@ def jogar():
             marca_chute_correto(chute, letras_acertadas, palavra_secreta)          
         else:
             tentativas += 1
+            letras_erradas += chute + " "
             desenha_forca(tentativas)
+            print('Ainda faltam acertar {} letras'.format(letras_faltando))
+            print('Você ainda tem {} tentativas'.format(7-tentativas))
+            print('Chutes errados: {}'.format(letras_erradas))
 
         enforcou == tentativas == 7
         acertou = "_" not in letras_acertadas    
@@ -108,7 +115,7 @@ def inicializa_letras_acertadas(palavra):
    return ["_" for letra in palavra]
 
 def pede_chute():
-    chute = input("Qual a letra?")
+    chute = input("Qual a letra?\n")
     chute = chute.strip().upper()
     return chute
 
