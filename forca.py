@@ -27,10 +27,10 @@ def jogar():
         acertou = "_" not in letras_acertadas    
         print(letras_acertadas)
 
-        if(acertou):
-            imprime_mensagem_vencedor()
-        else:
-            imprime_mensagem_perdedor(palavra_secreta)
+    if(acertou):
+        imprime_mensagem_vencedor()
+    else:
+        imprime_mensagem_perdedor(palavra_secreta)
     
 def desenha_forca(tentativas):
     print("  _______     ")
